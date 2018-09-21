@@ -22,7 +22,7 @@ endef
 define RGB_LED_MATRIX_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 0755 package/rgb-led-matrix/led_rgb_matrix.service \
 		$(TARGET_DIR)/usr/lib/systemd/system/led_rgb_matrix.service
-	$(INSTALL) -D -m 0755 package/rgb-led-matrix/led_rgb_matrix.service \
+	ln -sf $(TARGET_DIR)/usr/lib/systemd/system/led_rgb_matrix.service \
 		$(TARGET_DIR)/etc/systemd/system/multi-user.target.wants
 endef
 
