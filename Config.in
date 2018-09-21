@@ -1,0 +1,9 @@
+config BR2_PACKAGE_RGB_LED_MATRIX
+	bool "RGB led matrix module"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Kernel module to support rgb led matrix
+	  using incremental encoders.
+
+comment "RGB led matrix module requires a linux kernel to be built"
+	depends on !BR2_LINUX_KERNEL
