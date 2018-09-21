@@ -17,6 +17,7 @@ endef
 define RGB_LED_MATRIX_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/lib/librgbmatrix.so* $(TARGET_DIR)/usr/lib
 	$(INSTALL) -D -m 0755 $(@D)/examples-api-use/demo $(TARGET_DIR)/usr/bin
+	$(INSTALL) -D -m 0755 $(@D)/fonts/4x6.bdf $(TARGET_DIR)/etc
 endef
 
 define RGB_LED_MATRIX_INSTALL_INIT_SYSTEMD
